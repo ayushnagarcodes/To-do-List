@@ -1,0 +1,210 @@
+@font-face {
+    font-family: aileron;
+    src: url("graphics/aileron/Aileron-Regular.otf");
+    font-stretch: normal;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Aileron;
+    src: url("graphics/aileron/Aileron-Heavy.otf");
+    font-stretch: normal;
+    font-weight: 900;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Aileron, sans-serif;
+    font-weight: 400;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background: url("graphics/2 unsplash_0law-F0Qv_Y.png") top center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body > p {
+    margin-top: 56px;
+    margin-bottom: 68px;
+    font-family: Aileron, sans-serif;
+    font-weight: 900;
+    font-size: 78px;
+    background: linear-gradient(99.04deg, #E0E0E0 -36.69%, #47605c 25.93%, #001815 106.39%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.add-task-section {
+    display: flex;
+    gap: 15px;
+}
+
+#input-task {
+    width: 525px;
+    border: none;
+    border-bottom: 3px solid rgba(2, 26, 26, 0.5);
+    background-color: transparent;
+    font-size: 24px;
+    margin-bottom: 48px;
+    padding-left: 38px;
+    padding-bottom: 4px;
+}
+
+#input-task:focus {
+    outline: none;
+}
+
+#edit-square-icon {
+    position: absolute;
+    transform: translateY(10%);
+}
+
+#add-task-button {
+    width: 97px;
+    height: 42px;
+    border: none;
+    background: linear-gradient(99.53deg, rgba(255, 255, 255, 0.4) -15.6%, rgba(255, 255, 255, 0.1) 111.52%);
+    box-shadow: 4px 4px 24px -1px rgba(35, 57, 54, 0.25);
+    backdrop-filter: blur(25px);
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 3px;
+    position: absolute;
+    transform: translateX(560%) translateY(-15%);
+}
+
+#add-task-button:hover {
+    background-color: #c9c9c9;
+    transition: background-color .8s ease-out;
+}
+
+#task-list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+#task-list > li {
+    width: 525px;
+    height: 102px;
+    background: linear-gradient(99.53deg, rgba(255, 255, 255, 0.4) -15.6%, rgba(255, 255, 255, 0.1) 111.52%);
+    box-shadow: 4px 4px 24px -1px rgba(35, 57, 54, 0.25);
+    backdrop-filter: blur(25px);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 28px;
+    padding: 39px 29px;
+    border-radius: 6px;
+}
+
+.checkbox-btn {
+    height: 18px;
+    width: 18px;
+    margin-top: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.checkbox-btn:hover {
+    transform: scale(1.15);
+    transition: transform .4s ease-out;
+}
+
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    margin-left: auto;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    transform: scale(1.15);
+    transition: transform .4s ease-out;
+}
+
+.completed-task {
+    text-decoration: line-through;
+}
+
+@media screen and (max-width:600px) {
+    
+    body {
+        margin-bottom: 36px;
+    }
+
+    body > p {
+        margin-bottom: 56px;
+        font-size: 48px;
+    }
+    
+    .add-task-section {
+        margin-bottom: -14px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    #input-task {
+        width: 350px;
+        font-size: 20px;
+        padding-left: 28px;
+        padding-bottom: 4px;
+    }
+
+    #edit-square-icon {
+        position: absolute;
+        transform: translateY(0%);
+        transform: scale(.85);
+    }
+    
+    #add-task-button {
+        width: 85px;
+        height: 36px;
+        font-size: 20px;
+        position: relative;
+        top: -50px;
+        left: -210px;
+    }
+
+    #add-task-button > img {
+        transform: scale(.85);
+    }
+    
+    #task-list > li {
+        width: 350px;
+        height: 78px;
+        font-size: 20px;
+        gap: 16px;
+        margin-bottom: 14px;
+    }
+    
+    .checkbox-btn {
+        height: 16px;
+        width: 16px;
+        margin-top: 2px;
+    }
+    
+    .delete-btn {
+        margin-top: 0;
+        transform: scale(0.88);
+    }
+    
+    .completed-task {
+        text-decoration: line-through;
+    }
+}
