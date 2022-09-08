@@ -114,3 +114,10 @@ window.onload = (event) => {
         setNumOnTasks();
     }
 };
+
+
+document.addEventListener("keydown", function (event) {
+    if (event.code == "Enter") {
+        addButton.click();
+    }
+});
